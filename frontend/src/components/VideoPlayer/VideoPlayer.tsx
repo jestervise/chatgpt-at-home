@@ -18,7 +18,7 @@ function VideoPlayer() {
 
     return (
         <>
-         {/* <Plyr {...plyrProps} /> */}
+         <Plyr {...plyrProps} />
         </>
     )
 }

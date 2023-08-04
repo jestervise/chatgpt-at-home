@@ -1,0 +1,27 @@
+{
+  "name": "chatgpt-at-home",
+  "version": "1.0.0",
+  "description": "Frontend",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jestervise/chatgpt-at-home.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jestervise/chatgpt-at-home/issues"
+  },
+  "homepage": "https://github.com/jestervise/chatgpt-at-home#readme",
+  "devDependencies": {
+    "husky": "^7.0.0"
+  }
+}
