@@ -10,7 +10,15 @@ function VideoList() {
         setVideoList([
         {title:'a test video title', 
         length: 2000, 
-        createdDate: 1023, 
+        createdDate: 1691158990, 
+        type: VideoType.NORMAL, 
+        description:"description",
+        id:"123",
+        previewVideo:"ala"
+        },
+        {title:'a test video title', 
+        length: 2000, 
+        createdDate: 1691158990, 
         type: VideoType.NORMAL, 
         description:"description",
         id:"123",
@@ -26,7 +34,7 @@ function VideoList() {
         },
         {title:'a test video title', 
         length: 2000, 
-        createdDate: 1023, 
+        createdDate: 1691158990, 
         type: VideoType.NORMAL, 
         description:"description",
         id:"123",
@@ -34,15 +42,7 @@ function VideoList() {
         },
         {title:'a test video title', 
         length: 2000, 
-        createdDate: 1023, 
-        type: VideoType.NORMAL, 
-        description:"description",
-        id:"123",
-        previewVideo:"ala"
-        },
-        {title:'a test video title', 
-        length: 2000, 
-        createdDate: 1023, 
+        createdDate: 1691158990, 
         type: VideoType.NORMAL, 
         description:"description",
         id:"123",
@@ -54,7 +54,7 @@ function VideoList() {
     return (
         <>
          <Space direction="vertical" size={16}>
-            {videoList.map((data)=><VideoPreview videoData={data} />)}
+            {videoList.map((data, index)=><VideoPreview videoData={data} key={index}/>)}
          </Space>
         </>
     )

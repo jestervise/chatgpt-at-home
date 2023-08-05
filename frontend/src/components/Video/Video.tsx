@@ -1,6 +1,9 @@
 import { Card } from "antd"
 import { VideoPreviewData } from "../../types"
 import VideoPlayer from "../VideoPlayer/VideoPlayer"
+import * as dayjs from "dayjs"
+import * as relativeTime from "dayjs/plugin/relativeTime"
+dayjs.extend(relativeTime);
 
 interface VideoProps {
     videoData: VideoPreviewData
@@ -9,11 +12,11 @@ interface VideoProps {
 const  VideoPreview =({videoData}:VideoProps)=> {
 
     return (
-       <Card title={videoData.title} extra={<a href="#">More</a>} style={{ width: 300 }}>
-        <p>{videoData.description}</p>
-        <p>{videoData.type}</p>
-        <p>{videoData.createdDate}</p>
+       <Card title={videoData.title} extra={<a href="#">More</a>} style={{ width: 500 }}>
+     
+        <p>{dayjs().to(dayjs(videoData.createdDate))}</p>
         <VideoPlayer/>
+        <p>{videoData.description}</p>
        </Card>
     )
 }

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './HeaderBar.scss'
 import { Menu, MenuProps } from 'antd';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 const items: MenuProps['items'] = [
     {
@@ -49,6 +50,7 @@ const items: MenuProps['items'] = [
             },
           ],
         },
+        
       ],
     },
     {
@@ -58,6 +60,12 @@ const items: MenuProps['items'] = [
         </a>
       ),
       key: 'alipay',
+    },
+    {
+      label: (
+       <LanguageSwitcher/>
+      ),
+      key: 'langauge-switcher',
     },
   ];
 
