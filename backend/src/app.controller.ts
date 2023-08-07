@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Patch, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller('video')
@@ -7,6 +7,12 @@ export class AppController {
 
   @Get()
   findAll(): string {
+    return this.appService.getHello();
+  }
+
+  @Get('detail')
+  getVideoDetail(@Body() videoDetail: string): string {
+    console.log(videoDetail);
     return this.appService.getHello();
   }
 

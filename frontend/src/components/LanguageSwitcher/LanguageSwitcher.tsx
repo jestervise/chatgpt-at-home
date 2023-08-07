@@ -1,11 +1,13 @@
 import { DownCircleFilled } from '@ant-design/icons';
 import { Button, Dropdown, MenuProps } from 'antd';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const items: MenuProps['items'] = [
     {
       key: '1',
       label: (
-        <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+        <a rel="noopener noreferrer" onClick={()=>{i18next.changeLanguage('en-US')}}>
             EN
         </a>
       ),
@@ -13,7 +15,7 @@ const items: MenuProps['items'] = [
     {
       key: '2',
       label: (
-        <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+        <a rel="noopener noreferrer" onClick={()=>{i18next.changeLanguage('jp-JP')}} >
           JP
         </a>
       ),
@@ -21,7 +23,7 @@ const items: MenuProps['items'] = [
     {
       key: '3',
       label: (
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+        <a rel="noopener noreferrer" onClick={()=>{i18next.changeLanguage('cn-CN')}} >
           CN
         </a>
       ),
@@ -29,7 +31,7 @@ const items: MenuProps['items'] = [
     {
         key: '4',
         label: (
-          <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+          <a rel="noopener noreferrer" onClick={()=>{i18next.changeLanguage('bm-BM')}}>
             BM
           </a>
         ),
@@ -37,9 +39,11 @@ const items: MenuProps['items'] = [
   ];
 
 function LanguageSwitcher(){
+    const {t} = useTranslation();
+  
     return <div>
         <Dropdown menu={{ items }} placement="bottomLeft">
-            <Button type="text" icon={<DownCircleFilled  />}>Language Switcher</Button>
+            <Button type="text" icon={<DownCircleFilled  />}>{t('language.switcher.title')}</Button>
         </Dropdown>
     </div>
 }
