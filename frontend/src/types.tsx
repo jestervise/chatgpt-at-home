@@ -12,3 +12,24 @@ export interface VideoPreviewData{
     length: number,
     createdDate: number,
 }
+export interface UserData {
+    id: number;
+    name: string;
+    displayName: string;
+    gender: boolean;
+    country: string;
+    age: number;
+    userStat: UserStats;
+    videoStat: VideoStats;
+}
+
+export interface UserStats {
+    subscriberCount: number;
+    followerCount: number;
+    
+}
+
+export interface VideoStats {
+    viewCount: number
+    videoCount:number;
+}
